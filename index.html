@@ -11,11 +11,14 @@
 <body>
     <main>
         <h1>Cifrador César</h1>
+
         <form id="cipher" autocomplete="off">
             <input id="origin-input" spellcheck="false" placeholder="Ingrese el texto a cifrar..." type="text" name="text">
         </form>
-        <div id="result"></div>
-        <div id="range">
+
+        <div class="result"></div>
+
+        <div class="range-container">
             <input id="range" type="range" value="10" min="1" max="20" oninput="this.nextElementSibling.value = this.value">
             <output>10</output>
         </div>
