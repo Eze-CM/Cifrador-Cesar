@@ -39,7 +39,7 @@ input, button {
     outline: none;
 }
 
-#origin-input, .result {
+#origin-input, #result {
     background-color: var(--color-terminal);
     width: -webkit-fill-available;
 }
@@ -51,7 +51,7 @@ input, button {
     border-radius: 7px 7px 0 0;
 }
 
-.result {
+#result {
     height: 20px;
     color: #5AF78D;
     padding: 0 10px 10px;
