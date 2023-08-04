@@ -49,12 +49,25 @@ const animateChar = spanChar => {
     });
 }
 
-
-const submit = e => {
-    e.preventDefault();
-    result.innerHTML = '';
-    shiftMessage()
+const empty = result => {
+    if (result.innerHTML === '') {
+        const enterMessage = document.createElement("span");
+        enterMessage.textContent = "Y presione Enter para traducir...";
+        result.appendChild(enterMessage);
+    }
 }
 
 
+const submit = e => {
+    e.preventDefault();
+    
+    if (originInput.value === '') {                         // Si el campo está vacío, muestra un mensaje de error
+        alert("Por favor, ingrese un texto para cifrar.");
+    } else {                                                // Si no está vacío, realizar el cifrado
+        result.innerHTML = '';
+        shiftMessage();
+    }
+}
+
+empty(result)
 cipher.onsubmit = submit;
