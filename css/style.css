@@ -59,9 +59,6 @@ input, button {
 }
 
 #result {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     flex: 1;
     height: auto;
     color: #5AF78D;
